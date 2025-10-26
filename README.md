@@ -1,4 +1,4 @@
-# analisis_turnover_karyawan_sml2025
+# analisis_attrition_karyawan_sml2025
 Proyek machine learning untuk memprediksi turnover karyawan berdasarkan dataset kompetisi Kaggle Tugas 1 SML A-2025
 # Laporan Proyek Machine Learning 
 
@@ -114,7 +114,9 @@ Menggunnakan estimasi model terbaik yaitu LightGBM dengan metrik akurasi / AUC /
 
 ---
 
-## Kesimpulan 
-Model LightGBM (LGBMClassifier) yang dikembangkan dengan preprocessing dan feature engineering berhasil memberikan performa yang cukup baik dalam memprediksi kemungkinan attrition atau keluarnya karyawan dari perusahaan. Berdasarkan hasil evaluasi, model memperoleh akurasi sebesar 0.8814, yang menunjukkan kemampuan model untuk mengklasifikasikan sebagian besar data dengan benar. Nilai precision sebesar 0.7083 mengindikasikan bahwa dari seluruh prediksi karyawan yang diperkirakan akan keluar, sekitar 70% di antaranya benar-benar keluar. Sementara itu, recall sebesar 0.4474 menunjukkan bahwa model masih melewatkan sebagian kasus karyawan yang benar-benar keluar, namun tetap memberikan keseimbangan yang cukup baik dengan nilai F1-score 0.5484. Nilai AUC sebesar 0.7844 menandakan model memiliki kemampuan yang baik dalam membedakan antara karyawan yang keluar dan yang bertahan.
+## Kesimpulan
+Notebook ini membangun pipeline end-to-end mulai dari preprocessing, pemilihan model, tuning hyperparameter, evaluasi performa, hingga penyimpanan model akhir dalam format .pkl. Seluruh tahapan dilakukan secara terstruktur menggunakan scikit-learn pipeline dan cross-validation untuk memastikan hasil yang konsisten dan reproducible.
 
-Dari hasil ini, dapat disimpulkan bahwa faktor-faktor seperti masa kerja karyawan (YearsAtCompany), frekuensi promosi (YearsSinceLastPromotion), pendapatan bulanan (MonthlyIncome), dan lembur (OverTime) berperan penting dalam menentukan risiko attrition. Model ini dapat digunakan oleh perusahaan sebagai alat bantu pengambilan keputusan untuk mendeteksi lebih awal karyawan yang berpotensi keluar, sehingga langkah-langkah preventif seperti peningkatan kepuasan kerja, pemberian promosi tepat waktu, atau manajemen beban kerja dapat dilakukan untuk mengurangi tingkat turnover karyawan.
+Model LightGBM (LGBMClassifier) yang dikembangkan dengan preprocessing dan feature engineering berhasil memberikan performa yang cukup baik dalam memprediksi kemungkinan attrition atau keluarnya karyawan dari perusahaan. Berdasarkan hasil evaluasi, model memperoleh akurasi sebesar 0.8814, yang menunjukkan kemampuan model untuk mengklasifikasikan sebagian besar data dengan benar. Nilai precision sebesar 0.7083 mengindikasikan bahwa dari seluruh prediksi karyawan yang diperkirakan akan keluar, sekitar 70% di antaranya benar-benar keluar. Sementara itu, recall sebesar 0.4474 menunjukkan bahwa model masih melewatkan sebagian kasus karyawan yang benar-benar keluar, namun tetap memberikan keseimbangan yang cukup baik dengan nilai F1-score sebesar 0.5484. Nilai AUC sebesar 0.7844 menandakan bahwa model memiliki kemampuan yang baik dalam membedakan antara karyawan yang keluar dan yang bertahan.
+
+Secara keseluruhan, hasil ini menunjukkan bahwa faktor-faktor seperti masa kerja karyawan (YearsAtCompany), frekuensi promosi (YearsSinceLastPromotion), pendapatan bulanan (MonthlyIncome), dan lembur (OverTime) berperan penting dalam menentukan risiko attrition. Model yang dihasilkan dapat digunakan oleh perusahaan sebagai alat bantu dalam pengambilan keputusan untuk mendeteksi lebih awal karyawan yang berpotensi keluar. Dengan demikian, langkah-langkah preventif seperti peningkatan kepuasan kerja, pemberian promosi tepat waktu, serta manajemen beban kerja dapat dilakukan untuk mengurangi tingkat turnover karyawan.
